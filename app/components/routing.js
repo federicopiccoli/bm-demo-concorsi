@@ -5,7 +5,7 @@ angular.module('bmDemoConcorsiApp')
     $stateProvider
       .state('public', {
         url: '/public',
-        template: '<div ui-view></div>',
+        templateUrl: 'components/public.html',
         abstract: true
       })
       .state('public.login', {
@@ -25,6 +25,7 @@ angular.module('bmDemoConcorsiApp')
       })
       .state('app', {
         url: '/app',
+        templateUrl: 'components/app.html',
         abstract: true,
         resolve: {
 
