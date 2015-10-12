@@ -9,4 +9,4 @@
  * Main module of the application.
  */
 angular
-  .module('bmDemoConcorsiApp', []);
+  .module('bmDemoConcorsiApp', ['ui.router', 'dsg.loadingCounter']);
