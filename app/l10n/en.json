@@ -1,8 +1,8 @@
 {
-  "EMAIL" : "Email",
+  "LOGIN": "Login",
+  "EMAIL": "Email",
   "PASSWORD": "Password",
-  "PASSWORD_CONFIRM" : "Confirm password",
-  "REGISTER" : "Register",
-  "FORGOT" : "Forgot password?",
-  "LOGIN": "Login"
+  "PASSWORD_CONFIRM": "Password confirm",
+  "REGISTER": "Register",
+  "FORGOT": "Forgot password?"
 }

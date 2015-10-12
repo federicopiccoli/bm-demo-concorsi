@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Concorso</title>
+    <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -27,14 +27,12 @@
       <div class="container">
         <p>
           <span class="glyphicon glyphicon-heart"></span> from the Yeoman team
-          
           <span class="pull-right">
-            <button class="btn btn-link"
-                    ng-repeat="lang in availableLanguages"
+            <button class="btn btn-link" 
                     ng-click="changeLanguage(lang)"
-                    ng-disabled="currentLanguage === lang">{{lang | uppercase}}</button>
+                    ng-disabled="lang === currentLanguage"
+                    ng-repeat="lang in availableLanguages">{{lang|uppercase}}</button>
           </span>
-          
         </p>
       </div>
     </div>
