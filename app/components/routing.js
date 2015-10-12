@@ -6,12 +6,12 @@ angular.module('bmDemoConcorsiApp')
       .state('public', {
         url: '/public',
         templateUrl: 'components/public.html',
+        abstract: true,
         resolve: {
           User: function () {
-            return {}
+            return {};
           }
-        },
-        abstract: true
+        }
       })
       .state('public.login', {
         url: '/login',
@@ -37,6 +37,7 @@ angular.module('bmDemoConcorsiApp')
         }
       });
 
-    $urlRouterProvider.otherwise('/public/login');
+      $urlRouterProvider.otherwise('/public/login');
 
   });
+  

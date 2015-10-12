@@ -1,52 +1,63 @@
 <!doctype html>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width">
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  <!-- build:css(.) styles/vendor.css -->
-  <!-- bower:css -->
-  <!-- endbower -->
-  <!-- endbuild -->
-  <!-- build:css(.tmp) styles/main.css -->
-  <link rel="stylesheet" href="styles/main.css">
-  <!-- endbuild -->
-</head>
-
-<body ng-app="bmDemoConcorsiApp">
-  <!--[if lte IE 8]>
+  <head>
+    <meta charset="utf-8">
+    <title>Concorso</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="bmDemoConcorsiApp" ng-controller="AppCtrl">
+    <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-  <!-- Add your site or application content here -->
+    <!-- Add your site or application content here -->
 
-  <div ui-view></div>
+    <div ui-view></div>
 
-  <div class="footer">
-    <div class="container">
-      <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+    <div class="footer">
+      <div class="container">
+        <p>
+          <span class="glyphicon glyphicon-heart"></span> from the Yeoman team
+          
+          <span class="pull-right">
+            <button class="btn btn-link"
+                    ng-repeat="lang in availableLanguages"
+                    ng-click="changeLanguage(lang)"
+                    ng-disabled="currentLanguage === lang">{{lang | uppercase}}</button>
+          </span>
+          
+        </p>
+      </div>
     </div>
-  </div>
 
-  <!-- build:js(.) scripts/vendor.js -->
-  <!-- bower:js -->
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
-  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-  <script src="bower_components/angular-loading-counter/dist/angular-loading-counter.js"></script>
-  <script src="bower_components/angular-translate/angular-translate.js"></script>
-  <!-- endbower -->
-  <!-- endbuild -->
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-loading-counter/dist/angular-loading-counter.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/angular-translate-loader-url/angular-translate-loader-url.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
 
-  <!-- build:js({.tmp,app}) scripts/scripts.js -->
-  <script src="components/app.js"></script>
-  <script src="components/routing.js"></script>
-  <script src="components/public/user.js"></script>
-  <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="components/app.js"></script>
+    <script src="components/routing.js"></script>
+    <script src="components/l10n.js"></script>
+    <script src="components/public/user.js"></script>
+    <!-- endbuild -->
 </body>
-
 </html>
