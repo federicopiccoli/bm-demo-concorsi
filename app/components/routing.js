@@ -6,7 +6,12 @@ angular.module('bmDemoConcorsiApp')
       .state('public', {
         url: '/public',
         templateUrl: 'components/public.html',
-        abstract: true
+        abstract: true,
+        resolve: {
+          User: function () {
+            return {};
+          }
+        }
       })
       .state('public.login', {
         url: '/login',

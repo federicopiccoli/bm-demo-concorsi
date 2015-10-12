@@ -1,0 +1,20 @@
+<form name="forgotForm" 
+      class="forgot" 
+      ng-submit="forgot()">
+  <div class="form-group">
+    <label for="email">Type your email to get a password reset link</label>
+    <input type="email" 
+           class="form-control" 
+           placeholder="Email" 
+           ng-model="user.email"
+           required>
+  </div>
+  <div class="form-group">
+    <button type="submit"
+            class="btn btn-primary"
+            ng-disabled="!forgotForm.$valid">Reset password</button>
+    <button type="button" 
+            class="btn btn-default"
+            ui-sref="public.login">Back to login</button>
+  </div>
+</form>
