@@ -11,17 +11,17 @@ angular.module('bmDemoConcorsiApp')
       .state('public.login', {
         url: '/login',
         templateUrl: 'components/public/login.html',
-        controller: 'LoginCtrl'
+        controller: 'UserCtrl'
       })
       .state('public.forgot', {
         url: '/forgot',
         templateUrl: 'components/public/forgot.html',
-        controller: 'ForgotCtrl'
+        controller: 'UserCtrl'
       })
       .state('public.register', {
         url: '/register',
         templateUrl: 'components/public/register.html',
-        controller: 'RegisterCtrl'
+        controller: 'UserCtrl'
       })
       .state('app', {
         url: '/app',
