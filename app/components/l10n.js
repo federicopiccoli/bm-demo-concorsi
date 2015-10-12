@@ -1,13 +1,14 @@
 "use strict";
 
 angular.module('bmDemoConcorsiApp')
-  .config(function ($translateProvider) {
+  .constant('AVAILABLE_LANGUAGES', ['it', 'en', 'sw'])
+  .config(function ($translateProvider, AVAILABLE_LANGUAGES) {
     $translateProvider
       .useStaticFilesLoader({
         prefix: '/l10n/',
         suffix: '.json'
       })
-      .registerAvailableLanguageKeys(['it', 'en', 'sw'], {
+      .registerAvailableLanguageKeys(AVAILABLE_LANGUAGES, {
         'en_US': 'en',
         'en_UK': 'en',
         'it_IT': 'it',

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="bmDemoConcorsiApp">
+  <body ng-app="bmDemoConcorsiApp" ng-controller="AppCtrl">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -25,7 +25,15 @@
 
     <div class="footer">
       <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <p>
+          <span class="glyphicon glyphicon-heart"></span> from the Yeoman team
+          <span class="pull-right">
+            <button class="btn btn-link" 
+                    ng-click="changeLanguage(lang)"
+                    ng-disabled="lang === currentLanguage"
+                    ng-repeat="lang in availableLanguages">{{lang|uppercase}}</button>
+          </span>
+        </p>
       </div>
     </div>
 
