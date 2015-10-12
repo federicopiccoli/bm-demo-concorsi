@@ -1,0 +1,18 @@
+<form name="registerForm" class="login" ng-submit="login()">
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" placeholder="Email" ng-model="user.email" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" placeholder="Password" ng-model="user.password" ng-minlength="8" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" placeholder="Repeat password" ng-model="user.passwordConfirm" ng-minlength="8" required>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary" ng-disabled="!registerForm.$valid">Register</button>
+    <button type="button" class="btn btn-default" ui-sref="public.login">Back to login</button>
+  </div>
+</form>
