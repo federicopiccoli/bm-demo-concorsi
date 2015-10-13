@@ -1,8 +1,13 @@
 {
+  "TITLE": "Public contest",
   "LOGIN": "Login",
   "EMAIL": "Email",
   "PASSWORD": "Password",
   "PASSWORD_CONFIRM": "Password confirm",
   "REGISTER": "Register",
-  "FORGOT": "Forgot password?"
+  "FORGOT": "Forgot password?",
+  "NOT_VALID_EMAIL": "Please insert a valid email address",
+  "REQUIRED": "Mandatory",
+  "PASSWORD_MATCH_ERROR": "Password don't match",
+  "MIN_LENGTH_ERROR": "Password length must be {{minlength}} characters long"
 }

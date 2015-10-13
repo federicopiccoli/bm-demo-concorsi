@@ -1,5 +1,10 @@
 {
+  "TITLE": "Concorso pubblico",
   "PASSWORD_CONFIRM": "Conferma password",
   "REGISTER": "Registrazione",
-  "FORGOT": "Password dimenticata?"
+  "FORGOT": "Password dimenticata?",
+  "NOT_VALID_EMAIL": "Inserire un'email valida",
+  "REQUIRED": "Campo obbligatorio",
+  "PASSWORD_MATCH_ERROR": "La password di conferma non combacia",
+  "MIN_LENGTH_ERROR": "La password deve essere lunga almeno {{minlength}} caratteri"
 }
