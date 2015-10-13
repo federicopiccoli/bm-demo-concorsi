@@ -1,5 +1,5 @@
 {
-  "LOGIN": "Login",
+  "LOGIN": "<b>Login</b>",
   "EMAIL": "Email",
   "PASSWORD": "Password",
   "PASSWORD_CONFIRM": "Password confirm",
