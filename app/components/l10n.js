@@ -8,6 +8,7 @@ angular.module('bmDemoConcorsiApp')
         prefix: '/l10n/',
         suffix: '.json'
       })
+      .useSanitizeValueStrategy(null)
       .registerAvailableLanguageKeys(AVAILABLE_LANGUAGES, {
         'en_US': 'en',
         'en_UK': 'en',

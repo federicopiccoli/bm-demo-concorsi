@@ -30,5 +30,5 @@ angular
     }
 
     $scope.availableLanguages = AVAILABLE_LANGUAGES;
-    $scope.currentLanguage = $translate.proposedLanguage();
+    $scope.currentLanguage = $translate.proposedLanguage() || $translate.use();
   });
