@@ -6,41 +6,34 @@ angular.module('bmDemoConcorsiApp')
 
 
     $scope.login = function () {
-      delete $scope.error;
       UserService.login($scope.user.email, $scope.user.password)
         .then(function (authData) {
           $scope.user = {};
           //redirect su applicazione
           MessageService.info('LOGIN_SUCCESS');
         }).catch(function (error) {
-          $scope.error = error;
-          MessageService.error('error');
+          MessageService.error(error.code);
         });
     };
 
     $scope.register = function () {
-      delete $scope.error;
-
       UserService.register($scope.user.email, $scope.user.password)
         .then(function (userData) {
           $scope.login();
           MessageService.info('REGISTER_SUCCESS');
         }).catch(function (error) {
-          $scope.error = error;
-          MessageService.error('error');
+          MessageService.error(error.code);
         });
     };
 
     $scope.forgot = function () {
       delete $scope.message;
-      delete $scope.error;
       UserService.forgot($scope.user.email)
         .then(function () {
           $scope.user = {};
           MessageService.info('PASSWORD_RESET_SUCCESS');
         }).catch(function (error) {
-          $scope.error = error;
-          MessageService.error('error');
+          MessageService.error(error.code);
         });
     };
   });
