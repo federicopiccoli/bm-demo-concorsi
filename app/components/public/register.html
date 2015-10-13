@@ -1,54 +1,34 @@
-
-<form name="registerForm" 
-      class="register" 
-      ng-submit="register()">
-  <div class="form-group">
-    <label for="email">{{'EMAIL'|translate}}</label>
-    <input type="email" 
-           name="email"
-           class="form-control" 
-           placeholder="Email" 
-           ng-model="user.email"
-           required>
-    <span class="help-block"
-          ng-show="registerForm.email.$error.email">{{'NOT_VALID_EMAIL'|translate}}</span>
-    <span class="help-block"
-          ng-show="!registerForm.email.$pristine && registerForm.email.$error.required">{{'REQUIRED'|translate}}</span>
-  </div>
-  <div class="form-group">
-    <label for="password">{{'PASSWORD'|translate}}</label>
-    <input type="password" 
-           name="password"
-           class="form-control" 
-           placeholder="Password" 
-           ng-model="user.password"
-           ng-minlength="8"
-           required>
-    <span class="help-block"
-          ng-show="!registerForm.password.$pristine && registerForm.password.$error.required">{{'REQUIRED'|translate}}</span>
-    <span class="help-block"
-          ng-show="registerForm.password.$error.minlength">{{'MIN_LENGTH_ERROR'|translate: {minlength:8} }}</span>
-  </div>
-  <div class="form-group">
-    <label for="password">{{'PASSWORD_CONFIRM'|translate}}</label>
-    <input type="password"
-           name="passwordConfirm"
-           class="form-control" 
-           placeholder="Repeat password" 
-           ng-model="user.passwordConfirm"
-           ng-minlength="8"
-           required>
-    <span class="help-block"
-          ng-show="!registerForm.passwordConfirm.$pristine && registerForm.passwordConfirm.$error.required">{{'REQUIRED'|translate}}</span>
-    <span class="help-block"
-          ng-show="!registerForm.password.$pristine && !registerForm.passwordConfirm.$pristine && user.password !== user.passwordConfirm">{{'PASSWORD_MATCH_ERROR'|translate}}</span>
-  </div>
-  <div class="form-group">
-    <button type="submit" 
-            class="btn btn-primary"
-            ng-disabled="!registerForm.$valid || user.password !== user.passwordConfirm">{{'REGISTER'|translate}}</button>
-    <button type="button" 
-            class="btn btn-default"
-            ui-sref="public.login">Back to login</button>
-  </div>
+<form name="registerForm" class="register" ng-submit="register()">
+	<div class="form-group">
+		<label for="email">Email</label>
+		<input type="email" name="email" class="form-control" placeholder="Email" ng-model="user.email" required>
+		<span class="help-block" ng-show="registerForm.email.$error.email">
+			{{'NOT_VALID_EMAIL'|translate}}
+		</span>
+		<span class="help-block" ng-show="!registerForm.email.$pristine && registerForm.email.$error.required">
+			{{'FIELD_REQUIRED'|translate}}
+		</span>
+	</div>
+	<div class="form-group">
+		<label for="password">Password</label>
+		<input type="password" name="password" class="form-control" placeholder="Password" ng-model="user.password" ng-minlength="8" required>
+		<span class="help-block" ng-show="registerForm.password.$error.minlength">
+			{{'MIN_LENGTH_ERROR'|translate:{minlength:8} }}
+		</span>
+		<span class="help-block" ng-show="!registerForm.password.$pristine && registerForm.password.$error.required">
+			{{'FIELD_REQUIRED'|translate}}
+		</span>
+	</div>
+	<div class="form-group">
+		<label for="password">Password confirm</label>
+		<input type="password" name="passwordConfirm" class="form-control" placeholder="Repeat password" ng-model="user.passwordConfirm" ng-minlength="8" required>
+		<span class="help-block" ng-show="registerForm.passwordConfirm.$error.minlength">{{'MIN_LENGTH_ERROR'|translate:{minlength:8} }}</span>
+		<span class="help-block" ng-show="!registerForm.passwordConfirm.$pristine && registerForm.passwordConfirm.$error.required">{{'FIELD_REQUIRED'|translate}}</span>
+		<span class="help-block" ng-show="registerForm.passwordConfirm.$valid && user.passwordConfirm !== user.password">{{'PASSWORD_MISMATCH'|translate}}</span>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn-primary" ng-disabled="!registerForm.$valid || user.password !== user.passwordConfirm">{{'REGISTER'|translate}}</button>
+		<button type="button" class="btn btn-default" ui-sref="public.login">{{'BACK_TO_LOGIN'|translate}}</button>
+	</div>
+	<div class="alert alert-danger" ng-show="error.code">{{error.code|translate}}</div>
 </form>

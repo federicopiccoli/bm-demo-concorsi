@@ -37,7 +37,6 @@ angular.module('bmDemoConcorsiApp')
         }
       });
 
-      $urlRouterProvider.otherwise('/public/login');
+    $urlRouterProvider.otherwise('/public/login');
 
   });
-  

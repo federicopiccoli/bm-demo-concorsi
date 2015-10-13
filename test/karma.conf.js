@@ -31,6 +31,8 @@ module.exports = function(config) {
       'bower_components/angular-translate-loader-url/angular-translate-loader-url.js',
       'bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
       'bower_components/angular-cookies/angular-cookies.js',
+      'bower_components/firebase/firebase.js',
+      'bower_components/angularfire/dist/angularfire.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",
