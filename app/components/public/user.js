@@ -1,7 +1,7 @@
 "use strict";
 
 angular.module('bmDemoConcorsiApp')
-  .controller('UserCtrl', function ($scope, User, UserService) {
+  .controller('UserCtrl', function ($scope, User, UserService, MessageService) {
     $scope.user = User;
 
 
@@ -11,8 +11,10 @@ angular.module('bmDemoConcorsiApp')
         .then(function (authData) {
           $scope.user = {};
           //redirect su applicazione
+          MessageService.info('LOGIN_SUCCESS');
         }).catch(function (error) {
           $scope.error = error;
+          MessageService.error('error');
         });
     };
 
@@ -22,8 +24,10 @@ angular.module('bmDemoConcorsiApp')
       UserService.register($scope.user.email, $scope.user.password)
         .then(function (userData) {
           $scope.login();
+          MessageService.info('REGISTER_SUCCESS');
         }).catch(function (error) {
           $scope.error = error;
+          MessageService.error('error');
         });
     };
 
@@ -33,9 +37,10 @@ angular.module('bmDemoConcorsiApp')
       UserService.forgot($scope.user.email)
         .then(function () {
           $scope.user = {};
-          $scope.message = 'PASSWORD_RESET_SUCCESS';
+          MessageService.info('PASSWORD_RESET_SUCCESS');
         }).catch(function (error) {
           $scope.error = error;
+          MessageService.error('error');
         });
     };
   });
