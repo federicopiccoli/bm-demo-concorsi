@@ -1,13 +1,14 @@
 {
-	"TITLE": "Public contest",
-	"LOGIN": "Login",
-	"EMAIL": "Email",
-	"PASSWORD": "Password",
-	"PASSWORD_CONFIRM": "Password confirm",
-	"REGISTER": "Register",
-	"FORGOT": "Forgot password?",
-	"MIN_LENGTH_ERROR": "Value must be {{minlength}} characters long",
-	"NOT_VALID_EMAIL": "Not valid email",
-	"FIELD_REQUIRED": "Required field",
-	"BACK_TO_LOGIN": "Back to login"
+  "TITLE": "Public contest",
+  "LOGIN": "Login",
+  "EMAIL": "Email",
+  "PASSWORD": "Password",
+  "PASSWORD_CONFIRM": "Password confirm",
+  "REGISTER": "Register",
+  "FORGOT": "Forgot password?",
+  "MIN_LENGTH_ERROR": "Value must be {{minlength}} characters long",
+  "NOT_VALID_EMAIL": "Not valid email",
+  "FIELD_REQUIRED": "Required field",
+  "BACK_TO_LOGIN": "Back to login",
+  "CLOSE_MODAL": "Close"
 }
