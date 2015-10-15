@@ -10,5 +10,8 @@
   "NOT_VALID_EMAIL": "Not valid email",
   "FIELD_REQUIRED": "Required field",
   "BACK_TO_LOGIN": "Back to login",
-  "CLOSE_MODAL": "Close"
+  "CLOSE_MODAL": "Close",
+  "CHANGE_PASSWORD": "Change password",
+  "OLD_PASSWORD": "Old password",
+  "NEW_PASSWORD": "New password"
 }

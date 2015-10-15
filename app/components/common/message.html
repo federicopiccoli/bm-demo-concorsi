@@ -6,7 +6,9 @@
         <h4 class="modal-title">{{messageService.status}}</h4>
       </div>
       <div class="modal-body">
-        {{messageService.message}}
+        <div class="alert" ng-class="{'alert-danger': messageService.status === 'error'}" role="alert">
+          {{messageService.message}}
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" ng-click="close()">{{closeText}}</button>

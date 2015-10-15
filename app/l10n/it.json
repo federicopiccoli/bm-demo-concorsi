@@ -8,5 +8,8 @@
   "PASSWORD_MATCH_ERROR": "La password di conferma non combacia",
   "MIN_LENGTH_ERROR": "La password deve essere lunga almeno {{minlength}} caratteri",
   "BACK_TO_LOGIN": "Torna al login",
-  "CLOSE_MODAL": "Chiudi"
+  "CLOSE_MODAL": "Chiudi",
+  "CHANGE_PASSWORD": "Cambia password",
+  "OLD_PASSWORD": "Vecchia password",
+  "NEW_PASSWORD": "Nuova password"
 }
