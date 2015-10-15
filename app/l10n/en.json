@@ -13,5 +13,7 @@
   "CLOSE_MODAL": "Close",
   "CHANGE_PASSWORD": "Change password",
   "OLD_PASSWORD": "Old password",
-  "NEW_PASSWORD": "New password"
+  "NEW_PASSWORD": "New password",
+  "UPLOAD_TEXT": "Insert text",
+  "UPLOAD": "Upload"
 }

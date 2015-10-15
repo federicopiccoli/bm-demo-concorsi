@@ -1,5 +1,6 @@
 angular.module('bmDemoConcorsiApp')
   .controller('ChangePwdCtrl', function ($scope, $filter, UserService, MessageService) {
+    $scope.user = UserService.isLogged();
     $scope.changePwd = function () {
       UserService.changePassword($scope.oldPassword, $scope.newPassword)
         .then(function () {

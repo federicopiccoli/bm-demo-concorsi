@@ -1,0 +1,17 @@
+<form name="uploadForm" class="upload" ng-submit="upload()">
+  <div class="form-group">
+    <label for="uploadText">{{'UPLOAD_TEXT'|translate}}</label>
+    <textarea type="text" 
+              class="form-control" 
+              placeholder="{{'UPLOAD_TEXT'|translate}}" 
+              ng-model="uploadText" 
+              ng-maxLength="140"
+              maxLength="140"
+              required></textarea>
+    <p class="help-text">{{uploadText.length}}/140</p>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary" ng-disabled="!uploadForm.$valid">{{'UPLOAD'|translate}}</button>
+    <button type="button" class="btn btn-default" ui-sref="app.welcome">{{'CANCEL'|translate}}</button>
+  </div>
+</form>

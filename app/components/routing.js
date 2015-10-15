@@ -62,6 +62,11 @@ angular.module('bmDemoConcorsiApp')
         url: '/change-pwd',
         templateUrl: 'components/app/change-pwd.html',
         controller: 'ChangePwdCtrl'
+      })
+      .state('app.upload', {
+        url: '/upload',
+        templateUrl: 'components/app/upload.html',
+        controller: 'UploadCtrl'
       });
 
     $urlRouterProvider.otherwise('/app/welcome');

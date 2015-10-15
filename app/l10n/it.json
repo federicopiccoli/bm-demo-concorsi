@@ -11,5 +11,9 @@
   "CLOSE_MODAL": "Chiudi",
   "CHANGE_PASSWORD": "Cambia password",
   "OLD_PASSWORD": "Vecchia password",
-  "NEW_PASSWORD": "Nuova password"
+  "NEW_PASSWORD": "Nuova password",
+  "UPLOAD_TEXT": "Inserisci il testo",
+  "UPLOAD": "Upload",
+  "PROFILE": "Profilo",
+  "CANCEL": "Annulla"
 }
